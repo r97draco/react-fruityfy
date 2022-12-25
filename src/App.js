@@ -1,23 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import Navbar from "./components/Navbar";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import axios from "axios";
+import { useState } from "react";
+import "./App.css";
+import DisplayObject from "./components/DisplayObject";
 
 function App() {
+  const [name, setName] = React.useState("apple");
+  const handleChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const [apiData, setApiData] = useState();
+  const fetchData = async (fruit_name) => {
+    const res = await axios.get(
+      "http://localhost:8080/fruits/?fr=" + fruit_name
+    );
+    setApiData(res.data);
+    console.log(res.data);
+  };
+  const fetchRoot = async () => {
+    const res = await axios.get("http://localhost:8080");
+    setApiData(res.data);
+    console.log(typeof res.data);
+  };
+
+  const Log = ({ data }) => (
+    <pre>
+      <code>{JSON.stringify(apiData, null, 2)}</code>
+    </pre>
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Box
+        component="form"
+        sx={{
+          "& > :not(style)": { m: 10, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="outlined-name"
+          label="Fruit Name"
+          value={name}
+          onChange={handleChange}
+          onKeyPress={(ev) => {
+            // console.log(`Pressed keyCode ${ev.key}`);
+            if (ev.key === "Enter") {
+              // Do code here
+              fetchData(name);
+              ev.preventDefault();
+            }
+          }}
+        />
+      </Box>
+      <Box sx={{ mx: 10, width: "25ch" }}>
+        <DisplayObject data={{ apiData }} />
+      </Box>
     </div>
   );
 }
