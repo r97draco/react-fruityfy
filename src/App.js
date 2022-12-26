@@ -7,6 +7,8 @@ import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 import DisplayObject from "./components/DisplayObject";
+import { PieChart } from 'react-minimal-pie-chart';
+
 
 function App() {
   const [name, setName] = React.useState("apple");
@@ -60,8 +62,15 @@ function App() {
           }}
         />
       </Box>
-      <Box sx={{ mx: 10, width: "25ch" }}>
+      <Box flex={true} flexDirection={"row"} sx={{ mx: 10, width: "25ch" }}>
         <DisplayObject data={{ apiData }} />
+        <PieChart
+        data={[
+          { title: 'One', value: 10, color: '#E38627' },
+          { title: 'Two', value: 15, color: '#C13C37' },
+          { title: 'Three', value: 20, color: '#6A2135' },
+        ]}
+      />
       </Box>
     </div>
   );
