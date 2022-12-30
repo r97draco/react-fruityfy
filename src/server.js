@@ -466,3 +466,4 @@ const fruit_data = [
     },
   },
 ];
+

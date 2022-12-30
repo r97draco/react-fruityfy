@@ -7,10 +7,19 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { SliderTrack } from '@mui/material';
+import "../App.css";
+import createTheme from '@mui/material/styles/createTheme';
+import { ThemeProvider } from '@mui/material';
 
+const theme = createTheme({
+  typography: {
+    fontFamily: 'bangers, cursive'
+  },
+});
 
 const Navbar = () => {
   return (
+    <ThemeProvider theme={theme}>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -24,12 +33,13 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            FRUITIFY
+            FruitiFy
           </Typography>
-          <Button color="inherit">Rav</Button>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
+    </ThemeProvider>
   )
 }
 
