@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 
-
-export const DisplayObject = ({data}) => {
-
-
+export const DisplayObject = ({ data }) => {
   return (
     <div>
       <ul className="display-object">
@@ -19,8 +16,8 @@ export const DisplayObject = ({data}) => {
           </li>
         ))}
       </ul>
-      </div>
+    </div>
   );
-}
+};
 
 export default DisplayObject;
