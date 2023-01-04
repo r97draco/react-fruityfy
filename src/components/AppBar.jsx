@@ -187,9 +187,7 @@ export default function AppNavBar(props) {
               value={value}
               onKeyPress={(e) => {
                 if (e.key === "Enter") {
-                  {
-                    props.searchData(e.target.value);
-                  }
+                  props.searchData(e.target.value);
                 }
               }}
               onChange={(e) => {
