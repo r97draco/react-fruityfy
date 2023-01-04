@@ -25,7 +25,7 @@ const Zoom = () => {
 };
 
 function App() {
-  Zoom();
+  // Zoom();
   const [name, setName] = React.useState("apple");
   const [apiData, setApiData] = useState({});
   const [jsonApi, setJsonApi] = useState({
