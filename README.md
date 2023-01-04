@@ -1,7 +1,7 @@
 ## React-Fruitify
 --------
 ## Link to site
-(https://r97draco.github.io/)
+(https://r97draco.github.io/react-fruityfy/)
 
 ## How to start
 1. Clone or download the project.
