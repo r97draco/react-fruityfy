@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-fruityfy/static/css/main.4d9f34b1.css",
-    "main.js": "/react-fruityfy/static/js/main.4c89352b.js",
+    "main.css": "/react-fruityfy/static/css/main.482e2455.css",
+    "main.js": "/react-fruityfy/static/js/main.f162b4fd.js",
     "static/js/787.2554f1b1.chunk.js": "/react-fruityfy/static/js/787.2554f1b1.chunk.js",
     "index.html": "/react-fruityfy/index.html",
-    "main.4d9f34b1.css.map": "/react-fruityfy/static/css/main.4d9f34b1.css.map",
-    "main.4c89352b.js.map": "/react-fruityfy/static/js/main.4c89352b.js.map",
+    "main.482e2455.css.map": "/react-fruityfy/static/css/main.482e2455.css.map",
+    "main.f162b4fd.js.map": "/react-fruityfy/static/js/main.f162b4fd.js.map",
     "787.2554f1b1.chunk.js.map": "/react-fruityfy/static/js/787.2554f1b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d9f34b1.css",
-    "static/js/main.4c89352b.js"
+    "static/css/main.482e2455.css",
+    "static/js/main.f162b4fd.js"
   ]
 }
