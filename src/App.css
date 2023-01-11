@@ -46,6 +46,7 @@ th {
 .error {
   color: gray;
   font-weight: 600;
+  line-height: 1.5rem;
 }
 
 .fruit-info,

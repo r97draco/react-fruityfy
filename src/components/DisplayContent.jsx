@@ -21,7 +21,7 @@ const DisplayContent = (props) => {
     >
       <Box flex={1} className={"fruit-info"}>
         {apiData.length === 0 ? (
-          <h1 className="error">Error 404</h1>
+          <h1 className="error">Error 404<br></br>fruit not found ;(</h1>
         ) : (
           <DisplayJson jsonData={jsonApi} />
         )}

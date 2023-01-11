@@ -10,7 +10,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-const findFruit = (fruit_name) => {
+export const findFruit = (fruit_name) => {
   fruit_name= fruit_name.toLowerCase();
   for (let i = 0; i < fruit_data.length; i++) {
     if (fruit_data[i].name.toLowerCase() === fruit_name) {
@@ -467,3 +467,4 @@ const fruit_data = [
   },
 ];
 
+// export default findFruit;
