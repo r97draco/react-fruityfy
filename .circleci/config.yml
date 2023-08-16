@@ -41,7 +41,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: './deploy.sh'
+          command: ls -a
 workflows:
   build-and-test:
     jobs:
